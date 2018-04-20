@@ -1,0 +1,103 @@
+/*
+ * Copyright (C) 2014 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+
+    defaultConfig {
+        applicationId "com.example.android.uamp"
+        minSdkVersion 17
+        targetSdkVersion 26
+        versionCode 2
+        versionName "1.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+    lintOptions {
+        abortOnError true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    provided 'com.google.android.wearable:wearable:2.0.3'
+    compile 'com.google.android.gms:play-services-cast-framework:11.0.1'
+    compile 'com.google.android.support:wearable:2.0.3'
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support:cardview-v7:26.1.0'
+    compile 'com.android.support:mediarouter-v7:26.1.0'
+    compile 'com.android.support:leanback-v17:26.1.0'
+    compile 'com.android.support:design:26.1.0'
+    compile 'com.google.android.exoplayer:exoplayer:r2.5.0'
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-core:1.10.19'
+    androidTestCompile 'junit:junit:4.12'
+    androidTestCompile 'com.android.support:support-annotations:26.1.0'
+    androidTestCompile 'com.android.support.test:runner:0.5'
+    androidTestCompile 'com.android.support.test:rules:0.5'
+    compile files('libs/guava-19.0.jar')
+    compile files('libs/selenium-server-standalone-3.0.1.jar')
+    compile files('libs/junit-4.12.jar')
+    compile files('libs/serializer-2.7.2.jar')
+    compile files('libs/cssparser-0.9.20.jar')
+    compile files('libs/javax.servlet-api-3.1.0.jar')
+    compile files('libs/Selenium 3.0.1.jar')
+    compile files('libs/jna-platform-4.1.0.jar')
+    compile files('libs/websocket-common-9.2.15.v20160210.jar')
+    compile files('libs/hamcrest-library-1.3.jar')
+    compile files('libs/jetty-io-9.2.13.v20150730.jar')
+    compile files('libs/xalan-2.7.2.jar')
+    compile files('libs/xml-apis-1.4.01.jar')
+    compile files('libs/httpmime-4.5.2.jar')
+    compile files('libs/jna-4.1.0.jar')
+    compile files('libs/htmlunit-2.23.jar')
+    compile files('libs/netty-3.5.7.Final.jar')
+    compile files('libs/commons-codec-1.10.jar')
+    compile files('libs/sac-1.3.jar')
+    compile files('libs/httpcore-4.4.4.jar')
+    compile files('libs/websocket-api-9.2.15.v20160210.jar')
+    compile files('libs/httpclient-4.5.2.jar')
+    compile files('libs/neko-htmlunit-2.23.jar')
+    compile files('libs/websocket-client-9.2.15.v20160210.jar')
+    compile files('libs/jetty-util-9.2.13.v20150730.jar')
+    compile files('libs/gson-2.3.1.jar')
+    compile files('libs/htmlunit-core-js-2.23.jar')
+    compile files('libs/hamcrest-core-1.3.jar')
+    compile files('libs/Appium java-client-6.0.0-BETA5.jar')
+    compile files('libs/xercesImpl-2.11.0.jar')
+    compile files('libs/commons-lang3-3.4.jar')
+    compile files('libs/phantomjsdriver-1.3.0.jar')
+    compile files('libs/commons-logging-1.2.jar')
+    compile files('libs/commons-io-2.5.jar')
+    compile files('libs/commons-exec-1.3.jar')
+    compile files('libs/cglib-nodep-3.2.4.jar')
+}
